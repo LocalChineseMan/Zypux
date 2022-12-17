@@ -1,0 +1,21 @@
+package org.apache.commons.io.monitor;
+
+import java.io.File;
+
+public interface FileAlterationListener {
+  void onStart(FileAlterationObserver paramFileAlterationObserver);
+  
+  void onDirectoryCreate(File paramFile);
+  
+  void onDirectoryChange(File paramFile);
+  
+  void onDirectoryDelete(File paramFile);
+  
+  void onFileCreate(File paramFile);
+  
+  void onFileChange(File paramFile);
+  
+  void onFileDelete(File paramFile);
+  
+  void onStop(FileAlterationObserver paramFileAlterationObserver);
+}
